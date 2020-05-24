@@ -2,12 +2,13 @@
 
 An animated stripe checkout using XState and React
 
+
 # Usage
 
 Clone this repository to your local environment
 
 ```sh
-git clone https://github.com/jacobparis/react-boilerplate my-project
+git clone https://github.com/jacobparis/stripe-machine-example my-project
 ```
 
 Install node modules
