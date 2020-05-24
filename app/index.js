@@ -1,19 +1,23 @@
 import "./index.scss"
 
-import React from "react"
+import "core-js/stable"
+import "regenerator-runtime/runtime"
+
+import * as React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom"
+
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
 
 import HomeScene from "./scenes/home"
 
+const stripePromise = loadStripe("pk_test_Bq9vSRu57qWx8kaCfSoO0Vv800egpSYOwe")
+
 function App() {
     return (
-        <Router>
-            <Switch>
-                <Route path="/home" component={HomeScene} />
-                <Redirect from="/" to="/home" />
-            </Switch>
-        </Router>
+        <Elements stripe={stripePromise}>
+            <HomeScene />
+        </Elements>
     )
 }
 

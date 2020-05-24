@@ -1,9 +1,11 @@
 html {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     margin: 0;
+    background: linear-gradient(45deg, #6784F7, #8c6cef);
+    min-height: 100vh;
 }
 
 a {
